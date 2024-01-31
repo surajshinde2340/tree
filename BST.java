@@ -62,6 +62,28 @@ class BST {
 
     }
 
+// funcntion for printing in range 
+
+public static void range(Node root , int low , int high){
+    if(root == null ){
+        return ; 
+    }
+else if(root.data >= low && root.data <= high ){
+    System.out.print("\t" +root.data);
+    range(root.left ,low , high);
+    range(root.right , low, high);
+
+}else if(root.data < low ){
+    range(root.right,low,high);
+}else{
+    range(root.left, low , high );
+}
+
+
+
+}
+
+
     
     public static void main(String[] args) {
 
