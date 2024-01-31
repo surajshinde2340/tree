@@ -53,6 +53,14 @@ class BST {
 
 
 
+    public static Node inordersucc(Node root) {
+
+        if (root.left == null) {
+            return root;
+        }
+        return inordersucc(root.left);
+
+    }
 
     
     public static void main(String[] args) {
